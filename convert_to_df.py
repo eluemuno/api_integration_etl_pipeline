@@ -25,7 +25,6 @@ def convert_json_to_dict():
 
 
 def convert_dict_to_df(file):
-    # json_ = convert_json_to_dict()
     """Convert the dict file type to a pandas dataframe"""
     df = pd.json_normalize(file)
     df = df.rename({'clouds.all': 'all_clouds', 'coord.lat': 'coord_lattitude', 'coord.lon': 'coord_longitude',
